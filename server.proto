@@ -1,0 +1,18 @@
+syntax = "proto3";
+package icey.com;
+
+message Req{
+    //类型 字段 = 标志符
+    int32 a = 1;
+    int32 b = 2;
+}
+
+message Res{
+    int32 sum = 1;
+    int32 muil = 2;
+}
+
+service Math{
+    rpc add(Req)returns(Res){}
+    rpc muil(Req)returns(Res){}
+}
